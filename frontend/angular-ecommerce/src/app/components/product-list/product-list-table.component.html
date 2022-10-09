@@ -1,0 +1,21 @@
+<table class="table" style="background-image:  linear-gradient(rgba(230, 215, 215, 0) 0%,rgb(202, 185, 185) 100%),url('https://img.freepik.com/premium-photo/gray-calathea-lutea-leaf-patterned-background_53876-149681.jpg?w=740');">
+    <style>
+        thead th { text-align:left; background:rgb(185, 176, 176); color:white}
+    </style>
+<thead>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Units in stock</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let tempProduct of products">
+        <td class="align-middle"><img src="{{tempProduct.imageUrl}}" height="50" width="80"/></td>
+        <td class="align-middle" style="font: bold;">{{tempProduct.name}}</td>
+        <td class="align-middle">{{tempProduct.unitPrice | currency:'INR'}}</td>
+        <td class="align-middle">{{tempProduct.unitsInStock}}</td>
+    </tr>
+</tbody>
+</table>
